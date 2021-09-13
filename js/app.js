@@ -13,7 +13,7 @@ const showProducts = (products) => {
     const image = product.images;
     const div = document.createElement("div");
     div.classList.add("product");
-    div.innerHTML = `<div class="single-product shadow mx-2 rounded card  ">
+    div.innerHTML = `<div class="single-product shadow mx-2 rounded card h-100 ">
       <div>
     <img class="product-image shadow-sm  " src=${product.image}></img>
       </div>
@@ -37,7 +37,7 @@ const addToCart = (id, price) => {
   document.getElementById("total-Products").innerText = count;
 };
 
-const getInputValue = (id) => {
+const getInputValue = id => {
   const element = document.getElementById(id).innerText;
   const converted = parseInt(element);
   return converted;
@@ -74,7 +74,7 @@ const updateTaxAndCharge = () => {
     setInnerText("delivery-charge", 60);
     setInnerText("total-tax", priceConverted * 0.4);
   }
-  updateTotal();
+  // updateTotal();
 };
 
 //grandTotal update function
@@ -86,7 +86,7 @@ const updateTotal = () => {
 
 };
 
-updateTotal();
+// updateTotal();
 loadProducts();
 
 
