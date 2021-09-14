@@ -95,25 +95,3 @@ const updateTotal = () => {
 // updateTotal();
 loadProducts();
 
-
-/* 
-// TOTAL UPDATE 
-const productTotal = document.getElementById('total-Products');
-const price = document.getElementById('price');
-const DelivariCharge = document.getElementById('delivery-charge');
-const TotalText  = document.getElementById('total-tax');
-const TotalPrice = document.getElementById('total');
-
-
-function total (){
-  const productItem = Number(productTotal.innerText);
-  const PriceProduct = Number(price.innerText);
-  const DelivariPrice = Number(DelivariCharge.innerText);
-  const TotalTextPrice = Number(TotalText.innerText);
-  
-
-
-  const TotalPriceAdd = productItem + PriceProduct + DelivariPrice + TotalTextPrice;
-  TotalPrice.innerText= TotalPriceAdd;
-}
- */
