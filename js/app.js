@@ -26,6 +26,7 @@ const showProducts = (products) => {
       <button id="details-btn" class="btn btn-danger rounded-pill">Details</button></div>
       `;
     document.getElementById("all-products").appendChild(div);
+    
   }
 };
 let count = 0;
@@ -36,12 +37,12 @@ const addToCart = (id, price) => {
   updateTaxAndCharge();
   document.getElementById("total-Products").innerText = count;
 
-  // updateTotal();
+  updateTotal();
 };
 
 const getInputValue = id => {
   const element = document.getElementById(id).innerText;
-  const converted = parseInt(element);
+  const converted = parseFloat(element);
   return converted;
  
 };
@@ -52,13 +53,13 @@ const updatePrice = (id, value) => {
   const convertPrice = parseFloat(value);
   const total = convertedOldPrice + convertPrice;
   document.getElementById(id).innerText = total.toFixed(2);
-  updateTotal();
+  // updateTotal();
 };
 
 // set innerText function
 const setInnerText = (id, value) => {
   document.getElementById(id).innerText =  value.toFixed(2);
-  updateTotal();
+  // updateTotal();
 };
 
 // update delivery charge and total Tax
@@ -79,7 +80,7 @@ const updateTaxAndCharge = () => {
     setInnerText("delivery-charge", 60);
     setInnerText("total-tax", priceConverted * 0.4);
   }
-  updateTotal();
+  // updateTotal();
 };
 
 //grandTotal update function
